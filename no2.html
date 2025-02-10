@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Serás mía...</title>
+</head>
+<body>
+    <div class="container">
+        <!-- Reemplaza el iframe por tu GIF local -->
+        <img src="glennyaurano2.gif" alt="GIF dramático" class="gif">
+        
+        <h1>Vas a ser mía por las buenas o por las malas 😈🐺</h1>
+        <div class="btn">
+            <a href="si.html">SI</a>
+            <a href="#" id="btn-no">NO</a>
+        </div>
+    </div>
+    
+    <script>
+        // Obtener el botón NO
+        const btnNo = document.getElementById('btn-no');
+
+        // Evento de hover: mover el botón
+        btnNo.addEventListener('mouseover', () => {
+            const container = document.querySelector('.container');
+
+            // Generar posiciones aleatorias dentro del contenedor
+            const randomX = Math.random() * (container.offsetWidth - btnNo.offsetWidth);
+            const randomY = Math.random() * (container.offsetHeight - btnNo.offsetHeight);
+
+            // Cambiar la posición del botón
+            btnNo.style.position = 'absolute';
+            btnNo.style.left = `${randomX}px`;
+            btnNo.style.top = `${randomY}px`;
+        });
+
+        // Evitar redirección si el botón NO es presionado
+        btnNo.addEventListener('click', (e) => {
+            e.preventDefault();
+            alert("¡No puedes escapar de ser mi loba domesticada! 🐺❤️");
+        });
+    </script>
+</body>
+</html>
